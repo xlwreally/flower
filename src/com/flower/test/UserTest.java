@@ -1,7 +1,5 @@
 package com.flower.test;
 
-import java.util.Iterator;
-import java.util.List;
 
 import com.flower.dao.UserDao;
 import com.flower.dao.impl.UserDaoImpl;

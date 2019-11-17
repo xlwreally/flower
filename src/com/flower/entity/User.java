@@ -54,7 +54,7 @@ public void setType(int type) {
 public String toString() {
 	return "User [userid=" + userid + ", username=" + username + ", password="
 			+ password + ", sex=" + sex + ", birthday=" + birthday + ", tel="
-			+ tel + ", type=" + type + "]";
+			+ tel + ", type=";
 }
 
 }

@@ -17,9 +17,9 @@
                 <tr>
                     <td width="80" align="center"><a href="index.jsp">首页</a></td>
                     <td width="80" align="center"><a href="login.jsp">我的帐户</a></td>
-                    <td width="80" align="center"><a href="myorder.jsp">订单查询</a>
+                    <td width="80" align="center"><a href="index.jsp">订单查询</a>
                     </td>
-                    <td width="80" align="center"><a href="cart.jsp">购物车</a></td>
+                    <td width="80" align="center"><a href="index.jsp">购物车</a></td>
                     <td width="80" align="center"><a href="reg.jsp">免费注册</a></td>
                     <td width="320" align="center"><%=welcome	%>
                     </td>

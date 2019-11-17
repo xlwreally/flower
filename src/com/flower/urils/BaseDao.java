@@ -6,13 +6,13 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 
 public class BaseDao {
-    private String driver="com.mysql.cj.jdbc.Driver";
-    private String url="jdbc:mysql://localhost:3306/flower";
-    private String user="root";
-    private String pwd="12345678";
-	Connection con;
-	public Connection getCon()
-	{
+    private static String driver="com.mysql.cj.jdbc.Driver";
+    private static String url="jdbc:mysql://localhost:3306/flower";
+    private  static String user="root";
+    private  static String pwd="12345678";
+	private  static Connection con;
+
+	static {
 		try {
 			Class.forName(driver);
 			con=DriverManager.getConnection(url, user, pwd);
@@ -20,28 +20,33 @@ public class BaseDao {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+	}
+	public Connection getCon()
+	{
+
 		return  con;
 	}
 	public void closeCon(ResultSet rs,PreparedStatement psmt,Connection con)
 	{
-		try {
-			if(rs!=null)
-			{
-				rs.close();
-			}
-			if(psmt!=null)
-			{
-				psmt.close();
-			}
-			if(con!=null){
-				con.close();
-			}
-			
-		} catch (Exception e) {
-			// TODO: handle exception
-		}
+
+//		try {
+//			if(rs!=null)
+//			{
+//				rs.close();
+//			}
+//			if(psmt!=null)
+//			{
+//				psmt.close();
+//			}
+//			if(con!=null){
+//				con.close();
+//			}
+//
+//		} catch (Exception e) {
+//			// TODO: handle exception
+//		}
 	}
-	//���£�insert,update,delete����ͨ�÷���
+
 	public int executeSql(String sql,Object obj[])
     {
 		con=this.getCon();
